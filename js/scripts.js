@@ -15,13 +15,14 @@ var divide = function(number1, number2) {
 };
 
 $(document).ready(function(){
-  $("#add").submit(function(){
+ $("#add").submit(function(){
     var number1 = parseInt($("#add1").val());
-  console.log(number1)
-  var number2 = parseInt($("#add2").val());
-  if (number1 != NaN && number2 != NaN) {
-    alert(add(number1, number2));
-  }
-  })
+    var number2 = parseInt($("#add2").val());
+    $("#output").text(add(number1, number2));
+    //("#output").fadeIn();
+    event.preventDefault();
+    });
+   
+  });
+  
 
-});
